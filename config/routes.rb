@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   # verb "/path", to: "controller#action", as: "prefix"
 
   get '/tasks', to: 'tasks#index'
+  get 'tasks/:id', to: 'tasks#show', as: :task
+  post 'tasks/new', to: 'task#new'
 end
